@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 5.0.x
     - name: Restore dependencies
-      run: dotnet ${{ github.workspace }}/dotnetproj/dotnetproj.csproj restore
+      run: dotnet restore ${{ github.workspace }}/dotnetproj/dotnetproj.csproj
     - name: Build
       run: dotnet build ${{ github.workspace }}/dotnetproj/dotnetproj.csproj --no-restore
     - name: Test
